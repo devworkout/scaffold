@@ -5,11 +5,11 @@ namespace DevWorkout\Scaffold\Scaffolders;
 use Afterflow\Framework\Concerns\RunsScaffolders;
 use Afterflow\Framework\Scaffolder;
 
-class MultiScaffolder extends Scaffolder
+class ToolScaffolder extends Scaffolder
 {
     use RunsScaffolders;
 
-    static $description = 'Scaffold SaaS application';
+    static $description = 'Scaffold a tool application';
 
     function handle()
     {
@@ -20,10 +20,11 @@ class MultiScaffolder extends Scaffolder
             \DevWorkout\ScaffoldDocker\Scaffolders\ScaffoldDocker::class,
             AddHelpersFile::class,
             AddLocalRoutes::class,
+            AddWebhookRoutes::class,
             MoveUserModel::class,
             AddMustHavePackages::class,
             ScaffoldFrontend::class,
-            ScaffoldSaaS::class,
+            ScaffoldTool::class,
             AddDigitalOceanDroplet::class,
         ];
 

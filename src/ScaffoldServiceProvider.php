@@ -3,7 +3,7 @@
 namespace DevWorkout\Scaffold;
 
 use Afterflow\Framework\ScaffolderDiscovery;
-use DevWorkout\Scaffold\Scaffolders\MultiScaffolder;
+use DevWorkout\Scaffold\Scaffolders\ToolScaffolder;
 use Illuminate\Support\ServiceProvider;
 
 class ScaffoldServiceProvider extends ServiceProvider implements ScaffolderDiscovery
@@ -11,7 +11,7 @@ class ScaffoldServiceProvider extends ServiceProvider implements ScaffolderDisco
     public static function scaffolders(): array
     {
         return [
-            MultiScaffolder::class,
+            ToolScaffolder::class,
 //            AddIdeaToGitignore::class,
 //            AddGithubRepository::class,
 //            AddEnvoy::class,
