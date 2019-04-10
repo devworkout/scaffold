@@ -10,7 +10,9 @@ class AddIdeaToGitignore extends Scaffolder
 
     public function handle()
     {
-        file_put_contents('.gitignore', collect(file('.gitignore'))->add('.idea')->unique()->implode(PHP_EOL));
+        file_put_contents('.gitignore', collect(file('.gitignore'))->map(function ($v) {
+            return trim($v);
+        })->add('.idea')->unique()->implode(PHP_EOL));
     }
 
 }
