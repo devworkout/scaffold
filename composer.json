@@ -50,5 +50,11 @@
         "DevWorkout\\Scaffold\\ScaffoldServiceProvider"
       ]
     }
+  },
+  "repositories": {
+    "local-/work/afterflow/": {
+      "type": "path",
+      "url": "/work/afterflow/"
+    }
   }
 }

@@ -15,7 +15,7 @@ class AddHelpersFile extends Scaffolder
         }
 
         $this->command->task('Adding helpers file', function () {
-            \File::copy(__DIR__.'/../../stubs/helpers.php', 'app/helpers.php');
+            $this->copyStub(__DIR__.'/../../stubs', 'helpers.php', 'app/helpers.php');
         });
 
         $this->command->task('Configuring composer autoload', function () {

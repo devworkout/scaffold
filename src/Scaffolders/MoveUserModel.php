@@ -23,17 +23,14 @@ class MoveUserModel extends Scaffolder
             unlink('app/User.php');
         });
 
-        $this->command->task('Updating auth config... ', function () {
-            $this->replaceInFile('config/auth.php', 'App\User', 'App\Models\User');
+        $this->command->task('Updating other places... ', function () {
+            $this->replaceInFiles([
+                'config/auth.php',
+                'app/Http/Controllers/Auth/RegisterController.php',
+                'database/factories/UserFactory.php'
+            ], 'App\User', 'App\Models\User');
         });
 
-        $this->command->task('Updating auth controllers... ', function () {
-            $this->replaceInFile('app/Http/Controllers/Auth/RegisterController.php', 'App\User', 'App\Models\User');
-        });
-
-        $this->command->task('Updating user factory... ', function () {
-            $this->replaceInFile('database/factories/UserFactory.php', 'App\User', 'App\Models\User');
-        });
 
     }
 

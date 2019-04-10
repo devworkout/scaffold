@@ -9,6 +9,8 @@ class MultiScaffolder extends Scaffolder
 {
     use RunsScaffolders;
 
+    static $description = 'Scaffold SaaS application';
+
     function handle()
     {
         $scaffolders = [
