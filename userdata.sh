@@ -11,6 +11,8 @@ apt-get -y update
 apt-get -y install git docker-compose php-curl php-dom php-mbstring php-zip php-bcmath composer fish
 export COMPOSER_HOME="$HOME/.config/composer"
 
+chsh -s /usr/bin/fish
+
 #cat << EOF > /root/.ssh/id_rsa
 #:ssh-private-key:
 #EOF

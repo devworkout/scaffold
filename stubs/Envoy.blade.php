@@ -31,10 +31,14 @@ tail -f -n 50 /work/serpentine/storage/logs/caddy/access.log
 git stash; git pull origin master
 @endtask
 
-@task('composer')
+@task('cd', ['on' => 'website'])
+cd /work/:project_name:
+@endtask
+
+@task('composer', ['on' => 'website'])
 docker-compose exec -T website__workspace bash -c "composer install --no-dev"
 @endtask
 
-@task('reseed')
+@task('reseed', ['on' => 'website'])
 docker-compose exec -T website__workspace bash -c "php artisan migrate:fresh --seed"
 @endtask

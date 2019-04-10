@@ -21,6 +21,7 @@ class MultiScaffolder extends Scaffolder
             AddMustHavePackages::class,
             ScaffoldBlade::class,
             ScaffoldFrontend::class,
+            AddDigitalOceanDroplet::class,
         ];
 
         $this->runScaffolders($scaffolders);

@@ -43,6 +43,7 @@ class AddGithubRepository extends Scaffolder
         $j = json_decode($json, true);
 
         if (isset($j['html_url'])) {
+            `git remote add origin git@github.com:$username/$repo_name.git`;
             $this->command->line('Repository created: '.$j['html_url']);
         } else {
             $this->command->error('Failed to create repository: '.PHP_EOL.$json);
