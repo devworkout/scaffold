@@ -1,5 +1,7 @@
-@extends('layouts.app')
+@extends('layouts.auth')
+@section('title','Awesome Project')
 
 @section('content')
-    <div class="center text-5xl mt-32 font-light text-gray-700">Laravel</div>
+
+
 @endsection

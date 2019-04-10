@@ -1,1 +1,1 @@
-<a class="text-white text-2xl font-medium" href="/"> Afterflow </a>
+<a class="text-white text-2xl font-medium" href="/"> {{ config('app.name','Laravel') }} </a>
