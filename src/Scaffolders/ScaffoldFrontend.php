@@ -20,9 +20,20 @@ class ScaffoldFrontend extends Scaffolder
             'popper.js',
         ]);
 
-        $this->exec(
-            'npm install --save-dev tailwindcss@next laravel-mix-tailwind laravel-mix-purgecss tailwindcss-tables animate.css moment moment-timezone vee-validate',
-            'Updating package.json: ');
+        $deps = collect([
+            'tailwindcss@next',
+            'laravel-mix-tailwind',
+            'laravel-mix-purgecss',
+            'tailwindcss-tables',
+            'animate.css',
+            'moment',
+            'moment-timezone',
+            'vee-validate',
+        ]);
+
+        if (!$this->package->hasPackages($deps)) {
+            $this->exec('npm install '.$deps->implode(' ').' --save-dev ', 'Updating package.json: ');
+        }
 
         $this->exec(
             [

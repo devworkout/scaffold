@@ -8,16 +8,33 @@ class AddMustHavePackages extends Scaffolder
 {
     protected $question = 'Install must have composer packages?';
 
-
     public function handle()
     {
+        $require = collect([
+            "barryvdh/laravel-cors",
+            "laracasts/flash",
+            "pyaesone17/active-state",
+            "calebporzio/awesome-helpers"
+        ]);
+
+        $requireDev = collect([
+            "barryvdh/laravel-ide-helper",
+            "doctrine/dbal",
+        ]);
+
+        if (!$this->composer->hasPackages($require)) {
+            $this->exec('composer require '.$require->implode(' '));
+        }
+
+        if (!$this->composer->hasPackages($requireDev)) {
+            $this->exec('composer require --dev '.$requireDev->implode(' '));
+        }
+
         $this->exec([
-            'composer require --dev barryvdh/laravel-ide-helper doctrine/dbal',
-            'composer require barryvdh/laravel-cors laracasts/flash pyaesone17/active-state calebporzio/awesome-helpers',
             'php artisan -q ide-helper:gen',
             'php artisan -q ide-helper:eloquent',
             'php artisan -q ide-helper:met',
-        ], 'Configuring composer: ');
+        ], 'Generating ide helper files: ');
     }
 
 }

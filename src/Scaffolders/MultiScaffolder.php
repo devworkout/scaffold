@@ -12,6 +12,8 @@ class MultiScaffolder extends Scaffolder
     function handle()
     {
         $scaffolders = [
+            AddGithubRepository::class,
+            AddEnvoy::class,
             \DevWorkout\ScaffoldDocker\Scaffolders\ScaffoldDocker::class,
             AddHelpersFile::class,
             AddLocalRoutes::class,
