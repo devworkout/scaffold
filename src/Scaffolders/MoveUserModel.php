@@ -27,7 +27,8 @@ class MoveUserModel extends Scaffolder
             $this->replaceInFiles([
                 'config/auth.php',
                 'app/Http/Controllers/Auth/RegisterController.php',
-                'database/factories/UserFactory.php'
+                'database/factories/UserFactory.php',
+                'database/seeds/UsersTableSeeder.php',
             ], 'App\User', 'App\Models\User');
         });
 

@@ -23,7 +23,9 @@ Auth::routes();
 |
 */
 
-Route::view('', 'pages.landing');
+// Make it one user app
+Route::redirect('', 'app');
+//Route::view('', 'pages.landing');
 
 
 /*

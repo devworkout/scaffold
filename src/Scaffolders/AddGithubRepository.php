@@ -24,11 +24,11 @@ class AddGithubRepository extends Scaffolder
 
             $logins = $credentials->pluck('username')->toArray();
             $logins[] = '<comment>[add new login]</comment>';
-            $chosen = $this->command->choice('Which username to use?', $logins, count($logins) - 1);
+            $chosen = $this->command->choice('Which username to use?', $logins, 0);
 
         }
 
-        if ($chosen == '<comment>[add new login]</comment>') {
+        if (!$credentials->count() || $chosen == '<comment>[add new login]</comment>') {
 
             $username = $this->command->ask('GitHub username', trim(`git config --global user.name`));
             $password = $this->command->secret('GitHub password');

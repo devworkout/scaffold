@@ -14,7 +14,8 @@ class AddMustHavePackages extends Scaffolder
             "barryvdh/laravel-cors",
             "laracasts/flash",
             "pyaesone17/active-state",
-            "calebporzio/awesome-helpers"
+            "calebporzio/awesome-helpers",
+            "nunomaduro/laravel-console-summary"
         ]);
 
         $requireDev = collect([

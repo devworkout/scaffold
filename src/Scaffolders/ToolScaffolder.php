@@ -21,6 +21,7 @@ class ToolScaffolder extends Scaffolder
             AddHelpersFile::class,
             AddLocalRoutes::class,
             AddWebhookRoutes::class,
+            AddDefaultUser::class,
             MoveUserModel::class,
             AddMustHavePackages::class,
             ScaffoldFrontend::class,

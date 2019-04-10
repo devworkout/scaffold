@@ -31,6 +31,7 @@ class ScaffoldTool extends Scaffolder
                 'app/Http/Controllers/Auth/LoginController.php',
                 'app/Http/Controllers/Auth/ResetPasswordController.php',
                 'app/Http/Controllers/Auth/VerificationController.php',
+                'app/Http/Middleware/RedirectIfAuthenticated.php',
             ], '/home', '/app');
         });
 
