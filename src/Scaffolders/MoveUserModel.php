@@ -10,7 +10,7 @@ class MoveUserModel extends Scaffolder
 
     public function handle()
     {
-        if (!file_exists('/app/User.php') || file_exists('app/Models/User.php')) {
+        if (!file_exists('app/User.php') || file_exists('app/Models/User.php')) {
             return;
         }
 

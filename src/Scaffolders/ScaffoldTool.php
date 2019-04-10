@@ -22,7 +22,7 @@ class ScaffoldTool extends Scaffolder
 
         $this->command->task('Installing templates... ', function () {
             File::deleteDirectory('resources/views');
-            $this->copyStub(__DIR__.'/../../stubs', 'blade', 'resources/views');
+            $this->copyStub(__DIR__.'/../../stubs', 'views', 'resources/views');
         });
 
         $this->command->task('Adjusting auth controllers... ', function () {

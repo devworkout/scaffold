@@ -36,12 +36,12 @@
             <form action="{{ route('app.account.update') }}" method="POST">
                 @csrf
                 <div class="flex flex-wrap mb-6">
-                    <label class="block  font-medium mb-2" for="password">Current Password</label>
+                    <label class="block font-medium mb-2" for="password">Current Password</label>
                     <input id="password" required
-                           class="shadow appearance-none  rounded w-full py-2 px-3 text-grey-darker leading-tight"
+                           class="shadow appearance-none rounded w-full py-2 px-3 leading-tight"
                            placeholder="" type="password" name="password" value="">
                     @if ($errors->has('password'))
-                        <p class="text-red text-xs italic mt-4">
+                        <p class="text-red-500 text-xs italic mt-4">
                             {{ $errors->first('password') }}
                         </p>
                     @endif
@@ -49,10 +49,10 @@
                 <div class="flex flex-wrap mb-6">
                     <label class="block  font-medium mb-2" for="new_password">New Password</label>
                     <input id="new_password" required
-                           class="shadow appearance-none rounded w-full py-2 px-3 text-grey-darker leading-tight"
+                           class="shadow appearance-none rounded w-full py-2 px-3 leading-tight"
                            placeholder="" type="password" name="new_password" value="">
                     @if ($errors->has('new_password'))
-                        <p class="text-red text-xs italic mt-4">
+                        <p class="text-red-500 text-xs italic mt-4">
                             {{ $errors->first('new_password') }}
                         </p>
                     @endif
@@ -60,16 +60,16 @@
                 <div class="flex flex-wrap mb-6">
                     <label class="block font-medium mb-2" for="new_password_confirmation">Confirm New Password</label>
                     <input id="new_password_confirmation" required
-                           class="shadow appearance-none rounded w-full py-2 px-3 text-grey-darker leading-tight"
+                           class="shadow appearance-none rounded w-full py-2 px-3 leading-tight"
                            placeholder="" type="password" name="new_password_confirmation" value="">
                     @if ($errors->has('new_password_confirmation'))
-                        <p class="text-red text-xs italic mt-4">
+                        <p class="text-red-500 text-xs italic mt-4">
                             {{ $errors->first('new_password_confirmation') }}
                         </p>
                     @endif
                 </div>
 
-                <button type="submit" class="rounded-lg px-8 py-4 text-white bg-red-light">Update Password</button>
+                <button type="submit" class="rounded-lg px-8 py-4 text-white bg-red-500">Update Password</button>
             </form>
         </div>
     </div>
