@@ -4,9 +4,9 @@ namespace DevWorkout\Scaffold\Scaffolders;
 
 use Afterflow\Framework\Scaffolder;
 
-class ScaffoldBlade extends Scaffolder
+class ScaffoldSaaS extends Scaffolder
 {
-    protected $question = 'Scaffold Blade views?';
+    protected $question = 'Scaffold SaaS resources?';
 
     public function handle()
     {

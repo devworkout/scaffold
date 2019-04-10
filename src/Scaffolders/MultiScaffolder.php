@@ -20,8 +20,8 @@ class MultiScaffolder extends Scaffolder
             AddLocalRoutes::class,
             MoveUserModel::class,
             AddMustHavePackages::class,
-            ScaffoldBlade::class,
             ScaffoldFrontend::class,
+            ScaffoldSaaS::class,
             AddDigitalOceanDroplet::class,
         ];
 
