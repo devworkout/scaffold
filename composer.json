@@ -20,7 +20,9 @@
     "afterflow/framework": "dev-master",
     "devworkout/scaffold-docker": "dev-master",
     "guzzlehttp/guzzle": "^6.3",
+    "knplabs/github-api": "^2.11",
     "nunomaduro/laravel-console-task": "^1.2",
+    "php-http/guzzle6-adapter": "^1.1",
     "toin0u/digitalocean-v2": "^2.3"
   },
   "require-dev": {
