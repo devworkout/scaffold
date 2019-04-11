@@ -28,14 +28,15 @@
 
         <input type="hidden" name="remember" id="remember" value="On">
 
-        <div class="flex flex-wrap w-full px-4 justify-between items-center pt-8">
-            <button type="submit" class="btn text-gray-400 font-normal bg-gray-700 rounded hover:bg-gray-800 rounded">
+        <div class="flex flex-wrap w-full justify-between items-center pt-0">
+            <button type="submit"
+                    class="w-full btn text-gray-400 font-normal bg-gray-700 rounded hover:bg-gray-800 rounded">
                 Sign In
             </button>
 
-            <a class="btn text-gray-400 font-normal bg-transparent" href="{{ route('register') }}">
-                Sign Up
-            </a>
+            {{--            <a class="btn text-gray-400 font-normal bg-transparent" href="{{ route('register') }}">--}}
+            {{--                Sign Up--}}
+            {{--            </a>--}}
         </div>
         <div class="w-full text-center pt-8 -mb-8">
             <a class="text-gray-600" href="{{ route('password.request') }}">
@@ -45,3 +46,4 @@
     </form>
 
 @endsection
+
