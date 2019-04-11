@@ -72,7 +72,7 @@ class AddGithubRepository extends Scaffolder
             return $this->restart();
         }
 
-        $this->exec('git remote add origin '.$j['git_url']);
+        $this->exec('git remote add origin git@github.com:'.$username.'/'.$repo_name.'.git');
         $this->command->line('Repository created: '.$j['html_url']);
 
     }
