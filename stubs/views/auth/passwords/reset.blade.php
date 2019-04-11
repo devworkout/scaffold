@@ -19,7 +19,7 @@
         <div class="flex flex-col flex-wrap mb-6">
 
             <input autocomplete="new-password" id="password" placeholder="Password" type="password"
-                   class="input input-minimal border-gray-700 w-full {{ $errors->has('password') ? ' border-red-500' : '' }}"
+                   class="input input-minimal bg-gray-800 rounded text-gray-200 border-gray-700 border-gray-700 w-full {{ $errors->has('password') ? ' border-red-500' : '' }}"
                    name="password" required>
 
             @if ($errors->has('password'))
@@ -34,7 +34,7 @@
 
             <input autocomplete="new-password" id="password_confirmation" placeholder="Confirm Password"
                    type="password"
-                   class="input input-minimal border-gray-700 w-full {{ $errors->has('password_confirmation') ? ' border-red-500' : '' }}"
+                   class="input input-minimal bg-gray-800 rounded text-gray-200 border-gray-700 border-gray-700 w-full {{ $errors->has('password_confirmation') ? ' border-red-500' : '' }}"
                    name="password_confirmation" required>
 
             @if ($errors->has('password_confirmation'))
@@ -44,7 +44,7 @@
             @endif
         </div>
 
-        <div class="flex flex-wrap w-full items-center pt-8">
+        <div class="flex flex-wrap w-full items-center pt-4">
             <button type="submit" class="btn w-full text-gray-400 font-normal bg-gray-700 hover:bg-gray-700">
                 Reset Password
             </button>

@@ -5,11 +5,18 @@
     <div id="app">
         <div class="center h-screen">
 
+
             <div class="flex flex-col break-words bg-gray-900 sm:rounded-lg sm:shadow-lg sm:p-10">
 
                 <div class="center">
                     @include('partials.logo')
                 </div>
+
+                @if (session('status'))
+                    <div class="bg-green-200 text-green-800 rounded p-3 m-8 mb-0 border border-green-400" role="alert">
+                        {{ session('status') }}
+                    </div>
+                @endif
 
                 @yield('content')
 
