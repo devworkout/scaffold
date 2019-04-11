@@ -15,7 +15,7 @@ class AccountSettingsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware( 'auth' );
+        $this->middleware('auth');
     }
 
     /**
@@ -25,26 +25,26 @@ class AccountSettingsController extends Controller
      */
     public function index()
     {
-        return view( 'pages.app.account-settings' );
+        return view('pages.app.account-settings');
     }
 
-    public function update( Request $request )
+    public function update(Request $request)
     {
 
-        if ( !Hash::check( $request->get( 'password' ), auth()->user()->getAuthPassword() ) )
-        {
-            flash()->error( 'Current password is incorrect' );
+        if (!Hash::check($request->get('password'), auth()->user()->getAuthPassword())) {
+            flash()->error('Current password is incorrect');
+            return back();
         }
 
-        $this->validate( $request, [
+        $this->validate($request, [
             'new_password' => 'required|confirmed|min:6',
-        ] );
+        ]);
 
-        auth()->user()->update( [
-            'password' => bcrypt( $request->get( 'new_password' ) ),
-        ] );
+        auth()->user()->update([
+            'password' => bcrypt($request->get('new_password')),
+        ]);
 
-        flash()->success( 'Password updated' );
+        flash()->success('Password updated');
 
         return back();
 
